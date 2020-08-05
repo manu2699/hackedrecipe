@@ -9,7 +9,9 @@ const Home = (props) => {
   const [searchQuery, setsearchQuery] = useState("")
   const [searchResults, setsearchResults] = useState([])
   const getData = async () => {
-    const response = await axios.get("http://starlord.hackerearth.com/recipe")
+    const response = await axios.get("http://starlord.hackerearth.com/recipe",
+      {},
+      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, })
     setdata([...response.data, ...response.data])
     localStorage.setItem("data", JSON.stringify(response.data))
     setisLoading(false)
