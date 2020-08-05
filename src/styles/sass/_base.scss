@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: "Metropolis";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Metropolis"),
+		url("../Assets/Fonts/Metropolis/Metropolis-Medium.otf") format("opentype"); /* Safari, Android, iOS */
+}
+
+body {
+	margin: 0;
+	font-family: "Metropolis";
+	background-image: url("../Assets/background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.centerPage {
+	width: 99vw;
+	max-width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 5px 0px;
+}
+
+input[type="text"] {
+	background: transparent;
+	color: inherit;
+	font-size: 1.1em;
+	margin: 0px 0px;
+	height: 2em;
+	font-weight: 600;
+	font-family: inherit;
+	outline: none;
+	border-style: none;
+	width: 70%;
+}

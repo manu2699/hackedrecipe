@@ -1,0 +1,156 @@
+%col-layout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 40vw;
+	@media (max-width: 800px) {
+		width: 100vw;
+	}
+}
+.detailsPage {
+	width: 100vw;
+	max-width: 99vw;
+	padding: 5%;
+	@extend %col-layout;
+	.container {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		align-items: center;
+		justify-content: center;
+		.leftCol {
+			margin: 10px;
+			@extend %col-layout;
+			.coverImg {
+				@extend %col-layout;
+				margin: 10px;
+				width: 100%;
+				height: 200px;
+				position: relative;
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.6) 0%,
+					rgba(0, 0, 0, 0.6) 100%
+				);
+				border-radius: 20px;
+				margin: 20px 0px;
+				color: #fff;
+				.cover {
+					position: absolute;
+					left: 0;
+					top: 0%;
+					object-fit: cover;
+					z-index: -1;
+					width: 100%;
+					height: 100%;
+					border-radius: 20px;
+				}
+			}
+			.Ingredients,
+			.Prep {
+				margin: 10px;
+			}
+		}
+		.rightCol {
+			@extend %col-layout;
+			margin: 10px;
+			h5 {
+				opacity: 0.5;
+			}
+			.head {
+				h5,
+				h1,
+				p,
+				.rating {
+					text-align: right;
+					margin: 10px;
+				}
+				.rating {
+					display: flex;
+					font-weight: 600;
+					align-items: center;
+					justify-content: flex-end;
+					span {
+						background-color: #000;
+						color: #fff;
+						padding: 5px 10px;
+						border-radius: 5px;
+					}
+					img {
+						margin: 5px;
+					}
+				}
+			}
+			.statsRow {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				width: 100%;
+				.blackCircle {
+					width: 100px;
+					height: 100px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					background-color: #000;
+					color: #fff;
+					border-radius: 50%;
+					margin: 0px 10px;
+					span {
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.favRow {
+				display: flex;
+				align-items: center;
+				align-self: flex-end;
+				text-align: right;
+				margin: 20px 0px;
+				font-weight: 700;
+				img {
+					margin: 0px 5px;
+				}
+			}
+
+			.feedback {
+				width: 100%;
+				h5 {
+					margin: 5px 20px;
+				}
+				textarea {
+					background: #fff;
+					color: inherit;
+					font-size: 1.1em;
+					margin: 10px;
+					padding: 5px;
+					font-family: inherit;
+					border: none;
+					outline: none;
+					width: 100%;
+					height: 15vh;
+					padding: 10px;
+					border-radius: 10px;
+					&::placeholder {
+						font-size: 0.9em;
+						font-family: inherit;
+						opacity: 0.7;
+						font-weight: 500;
+					}
+				}
+				.blackButton {
+					border-radius: 10px;
+					width: 100%;
+					padding: 15px;
+					margin: 10px;
+					text-align: center;
+					background-color: #000;
+					color: #fff;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

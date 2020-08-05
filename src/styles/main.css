@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Metropolis"), url("../Assets/Fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+  /* Safari, Android, iOS */ }
+
+body {
+  margin: 0;
+  font-family: "Metropolis";
+  background-image: url("../Assets/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.centerPage {
+  width: 99vw;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 5px 0px; }
+
+input[type="text"] {
+  background: transparent;
+  color: inherit;
+  font-size: 1.1em;
+  margin: 0px 0px;
+  height: 2em;
+  font-weight: 600;
+  font-family: inherit;
+  outline: none;
+  border-style: none;
+  width: 70%; }
+
+.homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard, .homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard, .homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
+  width: 18vw;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 15px 5px;
+  cursor: pointer; }
+  @media (max-width: 1300px) {
+    .homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard, .homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard, .homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
+      width: 20vw; } }
+  @media (max-width: 1050px) {
+    .homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard, .homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard, .homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
+      width: 25vw; } }
+  @media (max-width: 800px) {
+    .homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard, .homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard, .homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
+      width: 40vw; } }
+  .homePage .searchResults .yellowCard .overlay, .homePage .mossaicLayout .yellowCard .overlay, .homePage .searchResults .whiteCard .overlay, .homePage .mossaicLayout .whiteCard .overlay, .homePage .searchResults .blackCard .overlay, .homePage .mossaicLayout .blackCard .overlay {
+    display: none; }
+  .homePage .searchResults .yellowCard:hover .overlay, .homePage .mossaicLayout .yellowCard:hover .overlay, .homePage .searchResults .whiteCard:hover .overlay, .homePage .mossaicLayout .whiteCard:hover .overlay, .homePage .searchResults .blackCard:hover .overlay, .homePage .mossaicLayout .blackCard:hover .overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: #f3ecd7; }
+    .homePage .searchResults .yellowCard:hover .overlay .overlayButton, .homePage .mossaicLayout .yellowCard:hover .overlay .overlayButton, .homePage .searchResults .whiteCard:hover .overlay .overlayButton, .homePage .mossaicLayout .whiteCard:hover .overlay .overlayButton, .homePage .searchResults .blackCard:hover .overlay .overlayButton, .homePage .mossaicLayout .blackCard:hover .overlay .overlayButton {
+      border-radius: 10px;
+      width: max-content;
+      padding: 10px 15px;
+      background-color: inherit;
+      color: inherit;
+      border-style: solid;
+      border-color: inherit;
+      cursor: pointer;
+      margin: 10px; }
+
+.homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard {
+  background-color: #ffff5f;
+  color: black;
+  height: 350px; }
+  .homePage .searchResults .yellowCard .dishImage, .homePage .mossaicLayout .yellowCard .dishImage {
+    height: 300px; }
+  .homePage .searchResults .yellowCard .content, .homePage .mossaicLayout .yellowCard .content {
+    background: linear-gradient(to bottom, rgba(255, 255, 95, 0) 0%, rgba(255, 255, 95, 0.5) 15%, rgba(255, 255, 95, 0.8) 50%, #ffff5f 100%); }
+
+.homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard {
+  background-color: white;
+  color: black;
+  height: 350px; }
+  .homePage .searchResults .whiteCard .dishImage, .homePage .mossaicLayout .whiteCard .dishImage {
+    height: 300px; }
+  .homePage .searchResults .whiteCard .content, .homePage .mossaicLayout .whiteCard .content {
+    background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 0.5) 15%, rgba(255, 255, 255, 0.9) 50%, white 100%); }
+
+.homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
+  background-color: black;
+  color: #f3ecd7;
+  height: 300px; }
+  .homePage .searchResults .blackCard .dishImage, .homePage .mossaicLayout .blackCard .dishImage {
+    height: 250px; }
+  .homePage .searchResults .blackCard .content, .homePage .mossaicLayout .blackCard .content {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0.9) 50%, black 100%); }
+
+.homePage .searchResults .dishCard, .homePage .mossaicLayout .dishCard {
+  color: inherit;
+  background-color: inherit;
+  position: relative; }
+  .homePage .searchResults .dishCard .dishImage, .homePage .mossaicLayout .dishCard .dishImage {
+    width: 100%; }
+    .homePage .searchResults .dishCard .dishImage img, .homePage .mossaicLayout .dishCard .dishImage img {
+      object-fit: cover;
+      width: inherit;
+      height: inherit;
+      border-radius: 5px; }
+  .homePage .searchResults .dishCard .content, .homePage .mossaicLayout .dishCard .content {
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    bottom: -50px;
+    left: 0;
+    overflow: hidden;
+    color: inherit; }
+    .homePage .searchResults .dishCard .content .titleRow, .homePage .mossaicLayout .dishCard .content .titleRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  .homePage .searchResults .dishCard .detailsBtn, .homePage .mossaicLayout .dishCard .detailsBtn {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    border-radius: 0 0 0 20px;
+    color: inherit;
+    background-color: inherit;
+    text-transform: capitalize; }
+
+.homePage {
+  width: 100vw;
+  max-width: 99vw;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .homePage .searchRow {
+    display: flex;
+    width: 80%;
+    align-items: center; }
+    @media (max-width: 800px) {
+      .homePage .searchRow {
+        width: 100%; } }
+    .homePage .searchRow .icon-whiteBg {
+      background-color: white;
+      width: max-content;
+      height: max-content;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 0px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .homePage .searchRow .clearButton {
+      border-radius: 10px;
+      width: max-content;
+      padding: 5px 10px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer; }
+  .homePage .headingRow {
+    display: flex;
+    width: 85%;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; }
+    .homePage .headingRow h4 {
+      opacity: 0.5; }
+    @media (max-width: 800px) {
+      .homePage .headingRow {
+        width: 100%; } }
+  .homePage .searchResults {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .homePage .mossaicLayout {
+    width: 85%;
+    align-self: center;
+    columns: 4;
+    column-fill: auto; }
+    @media (max-width: 1050px) {
+      .homePage .mossaicLayout {
+        width: 95%;
+        padding: 5%;
+        columns: 3; } }
+    @media (max-width: 800px) {
+      .homePage .mossaicLayout {
+        width: 100%;
+        padding: 3%;
+        columns: 2; } }
+
+.detailsPage, .detailsPage .container .leftCol, .detailsPage .container .leftCol .coverImg, .detailsPage .container .rightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw; }
+  @media (max-width: 800px) {
+    .detailsPage, .detailsPage .container .leftCol, .detailsPage .container .leftCol .coverImg, .detailsPage .container .rightCol {
+      width: 100vw; } }
+
+.detailsPage {
+  width: 100vw;
+  max-width: 99vw;
+  padding: 5%; }
+  .detailsPage .container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center; }
+    .detailsPage .container .leftCol {
+      margin: 10px; }
+      .detailsPage .container .leftCol .coverImg {
+        margin: 10px;
+        width: 100%;
+        height: 200px;
+        position: relative;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+        border-radius: 20px;
+        margin: 20px 0px;
+        color: #fff; }
+        .detailsPage .container .leftCol .coverImg .cover {
+          position: absolute;
+          left: 0;
+          top: 0%;
+          object-fit: cover;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px; }
+      .detailsPage .container .leftCol .Ingredients,
+      .detailsPage .container .leftCol .Prep {
+        margin: 10px; }
+    .detailsPage .container .rightCol {
+      margin: 10px; }
+      .detailsPage .container .rightCol h5 {
+        opacity: 0.5; }
+      .detailsPage .container .rightCol .head h5,
+      .detailsPage .container .rightCol .head h1,
+      .detailsPage .container .rightCol .head p,
+      .detailsPage .container .rightCol .head .rating {
+        text-align: right;
+        margin: 10px; }
+      .detailsPage .container .rightCol .head .rating {
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        justify-content: flex-end; }
+        .detailsPage .container .rightCol .head .rating span {
+          background-color: #000;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px; }
+        .detailsPage .container .rightCol .head .rating img {
+          margin: 5px; }
+      .detailsPage .container .rightCol .statsRow {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%; }
+        .detailsPage .container .rightCol .statsRow .blackCircle {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #000;
+          color: #fff;
+          border-radius: 50%;
+          margin: 0px 10px; }
+          .detailsPage .container .rightCol .statsRow .blackCircle span {
+            font-size: 0.8em; }
+      .detailsPage .container .rightCol .favRow {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        text-align: right;
+        margin: 20px 0px;
+        font-weight: 700; }
+        .detailsPage .container .rightCol .favRow img {
+          margin: 0px 5px; }
+      .detailsPage .container .rightCol .feedback {
+        width: 100%; }
+        .detailsPage .container .rightCol .feedback h5 {
+          margin: 5px 20px; }
+        .detailsPage .container .rightCol .feedback textarea {
+          background: #fff;
+          color: inherit;
+          font-size: 1.1em;
+          margin: 10px;
+          padding: 5px;
+          font-family: inherit;
+          border: none;
+          outline: none;
+          width: 100%;
+          height: 15vh;
+          padding: 10px;
+          border-radius: 10px; }
+          .detailsPage .container .rightCol .feedback textarea::placeholder {
+            font-size: 0.9em;
+            font-family: inherit;
+            opacity: 0.7;
+            font-weight: 500; }
+        .detailsPage .container .rightCol .feedback .blackButton {
+          border-radius: 10px;
+          width: 100%;
+          padding: 15px;
+          margin: 10px;
+          text-align: center;
+          background-color: #000;
+          color: #fff;
+          cursor: pointer; }
