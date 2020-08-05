@@ -2,19 +2,26 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Loader from "react-loader-spinner"
 import DishCard from "../components/dishCard";
+import apiData from "../data.json";
 
 const Home = (props) => {
   const [data, setdata] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const [searchQuery, setsearchQuery] = useState("")
   const [searchResults, setsearchResults] = useState([])
+
   const getData = async () => {
-    const response = await axios.get("http://starlord.hackerearth.com/recipe",
-      {},
-      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, })
-    setdata([...response.data, ...response.data])
-    localStorage.setItem("data", JSON.stringify(response.data))
-    setisLoading(false)
+    //this api call throws error on accessing http content from https site
+    try {
+      const response = await axios.get("http://starlord.hackerearth.com/recipe")
+      await setdata([...response.data, ...response.data])
+      await setisLoading(false)
+      localStorage.setItem("data", JSON.stringify(response.data))
+
+    } catch (e) {
+      await setdata([...apiData, ...apiData])
+      await setisLoading(false)
+    }
   }
 
   useEffect(() => {
