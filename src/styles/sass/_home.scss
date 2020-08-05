@@ -12,7 +12,8 @@
 		width: 25vw;
 	}
 	@media (max-width: 800px) {
-		width: 40vw;
+		width: 45vw;
+		margin: 5px;
 	}
 	.overlay {
 		display: none;
@@ -216,12 +217,12 @@
 		// column-gap: 1em;
 		@media (max-width: 1050px) {
 			width: 95%;
-			padding: 5%;
+			padding: 3%;
 			columns: 3;
 		}
 		@media (max-width: 800px) {
-			width: 100%;
-			padding: 3%;
+			width: 110%;
+			padding: 1%;
 			columns: 2;
 		}
 		@extend %card-layout;

@@ -39,6 +39,12 @@ h4,
 h5 {
   margin: 5px 0px; }
 
+h2 {
+  font-size: 1.5rem; }
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 1rem; } }
+
 input[type="text"] {
   background: transparent;
   color: inherit;
@@ -66,7 +72,8 @@ input[type="text"] {
       width: 25vw; } }
   @media (max-width: 800px) {
     .homePage .searchResults .yellowCard, .homePage .mossaicLayout .yellowCard, .homePage .searchResults .whiteCard, .homePage .mossaicLayout .whiteCard, .homePage .searchResults .blackCard, .homePage .mossaicLayout .blackCard {
-      width: 40vw; } }
+      width: 45vw;
+      margin: 5px; } }
   .homePage .searchResults .yellowCard .overlay, .homePage .mossaicLayout .yellowCard .overlay, .homePage .searchResults .whiteCard .overlay, .homePage .mossaicLayout .whiteCard .overlay, .homePage .searchResults .blackCard .overlay, .homePage .mossaicLayout .blackCard .overlay {
     display: none; }
   .homePage .searchResults .yellowCard:hover .overlay, .homePage .mossaicLayout .yellowCard:hover .overlay, .homePage .searchResults .whiteCard:hover .overlay, .homePage .mossaicLayout .whiteCard:hover .overlay, .homePage .searchResults .blackCard:hover .overlay, .homePage .mossaicLayout .blackCard:hover .overlay {
@@ -212,12 +219,12 @@ input[type="text"] {
     @media (max-width: 1050px) {
       .homePage .mossaicLayout {
         width: 95%;
-        padding: 5%;
+        padding: 3%;
         columns: 3; } }
     @media (max-width: 800px) {
       .homePage .mossaicLayout {
-        width: 100%;
-        padding: 3%;
+        width: 110%;
+        padding: 1%;
         columns: 2; } }
 
 .detailsPage, .detailsPage .container .leftCol, .detailsPage .container .leftCol .coverImg, .detailsPage .container .rightCol {

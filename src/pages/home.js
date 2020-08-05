@@ -43,15 +43,18 @@ const Home = (props) => {
   }
 
   let clearResults = async () => {
+    let toClear = document.getElementById("search")
+    if (toClear)
+      toClear.value = "";
     await setsearchQuery("")
     await setsearchResults([])
   }
 
-  useEffect(() => {
-    if (searchQuery.length <= 1) {
-      clearResults()
-    }
-  }, [searchQuery])
+  // useEffect(() => {
+  //   if (searchQuery.length <= 1) {
+  //     clearResults()
+  //   }
+  // }, [searchQuery])
 
   return (
     <>
@@ -64,11 +67,11 @@ const Home = (props) => {
               <div className="icon-whiteBg">
                 <img src={require("../Assets/Icons/Icon feather-search.png")} alt="" />
               </div>
-              <input type="text" onChange={async e => {
+              <input type="text" id="search" onChange={async e => {
                 await setsearchQuery(e.target.value)
                 await searchUtil()
               }} placeholder="Search your favourite recipe.." />
-              {searchQuery.length >= 2 && <div className="clearButton" onClick={() => { clearResults() }}>Clear</div>}
+              {searchResults.length >= 1 && <div className="clearButton" onClick={() => { clearResults() }}>Clear</div>}
             </div>
 
             <div className="headingRow">
