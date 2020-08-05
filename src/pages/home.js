@@ -20,6 +20,7 @@ const Home = (props) => {
 
     } catch (e) {
       await setdata([...apiData, ...apiData])
+      localStorage.setItem("data", JSON.stringify(apiData))
       await setisLoading(false)
     }
   }
