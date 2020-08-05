@@ -79,7 +79,7 @@ const Home = (props) => {
               <h2>Pizza {"&"} Noodles</h2>
             </div>
 
-            {searchQuery.length >= 2 && <h3>Search Results</h3>}
+            {searchResults.length >= 1 && <h3>Search Results</h3>}
 
             <div className="searchResults">
               {searchResults.map((dish, index) => {
